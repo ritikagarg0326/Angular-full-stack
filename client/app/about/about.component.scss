@@ -1,6 +1,76 @@
-ul {
-  &:first-child {
-    list-style-type: none;
-    margin-left: -20px;
+.card {
+  border-radius: 14px;
+  border: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border-radius: 14px 14px 0 0;
+}
+
+.card-body {
+  background-color: #fafafa;
+  padding: 1.5rem;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    li {
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+      color: #374151;
+      line-height: 1.5;
+
+      b {
+        color: #111827;
+        font-weight: 600;
+      }
+
+      a {
+        color: #4f46e5;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+          text-decoration: underline;
+          color: #4338ca;
+        }
+      }
+    }
+
+    // Section headings like "MEAN stack" / "Other tools"
+    >li:nth-child(3),
+    >li:nth-child(5) {
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    // Nested lists (MEAN stack & tools)
+    ul {
+      margin-top: 0.5rem;
+      padding-left: 1.2rem;
+
+      li {
+        position: relative;
+        padding-left: 1.2rem;
+        font-size: 0.92rem;
+
+        &::before {
+          content: "•";
+          position: absolute;
+          left: 0;
+          color: #6366f1;
+          font-size: 1.2rem;
+          line-height: 1;
+        }
+      }
+    }
   }
 }
