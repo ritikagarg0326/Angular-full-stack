@@ -1,5 +1,5 @@
 # Angular Full Stack 
-[![](https://github.com/davideviolante/Angular-Full-Stack/workflows/Build/badge.svg)](https://github.com/DavideViolante/Angular-Full-Stack/actions?query=workflow%3ABuild) [![](https://github.com/davideviolante/Angular-Full-Stack/workflows/Tests/badge.svg)](https://github.com/DavideViolante/Angular-Full-Stack/actions?query=workflow%3ATests) [![Donate](https://img.shields.io/badge/paypal-donate-179BD7.svg)](https://www.paypal.me/dviolante)
+
 
 
 Angular Full Stack is a project to easly get started with the latest Angular using a real backend and database. Whole stack is in TypeScript, from frontend to backend, giving you the advantage to code in one single language throughout the all stack.
@@ -69,11 +69,3 @@ Run `npm run test:be` to execute the backend tests via [Jest](https://jestjs.io/
 ## Running linters
 Run `npm run lint` to execute [Angular ESLint](https://github.com/angular-eslint/angular-eslint), [HTML linting](https://github.com/htmlhint/HTMLHint) and [SASS linting](https://github.com/sasstools/sass-lint).
 
-## Wiki
-To get more help about this project, [visit the official wiki](https://github.com/DavideViolante/Angular-Full-Stack/wiki).
-
-## Further help
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-### Author
-* [Davide Violante](https://github.com/DavideViolante)
