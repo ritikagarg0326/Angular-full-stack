@@ -1,19 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-deployment
+  name: app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: backend
+      app: app
   template:
     metadata:
       labels:
-        app: backend
+        app: app
     spec:
       containers:
-      - name: backend
-        image: angular-full-stack-app:latest
+      - name: app
+        image: afs-app:latest   # replace with DockerHub/ECR image
         ports:
         - containerPort: 3000
+        env:
+        - name: MONGO_URL
+          value: mongodb://mongo:27017
