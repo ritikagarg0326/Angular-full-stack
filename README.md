@@ -69,3 +69,32 @@ Run `npm run test:be` to execute the backend tests via [Jest](https://jestjs.io/
 ## Running linters
 Run `npm run lint` to execute [Angular ESLint](https://github.com/angular-eslint/angular-eslint), [HTML linting](https://github.com/htmlhint/HTMLHint) and [SASS linting](https://github.com/sasstools/sass-lint).
 
+## ✅ Prerequisites
+- Docker Desktop (Kubernetes enabled)
+- kubectl installed
+
+```bash
+docker --version
+kubectl version --client
+
+Step 1: Build Docker Image
+
+Kubernetes does NOT build images.
+
+docker build -t afs-app .
+docker images
+Step 2: Deploy MongoDB (Storage + DB)
+kubectl apply -f k8s/mongo-pvc.yaml
+kubectl apply -f k8s/mongo-deployment.yaml
+kubectl apply -f k8s/mongo-service.yaml
+
+Step 3: Deploy Application
+kubectl apply -f k8s/app-deployment.yaml
+kubectl apply -f k8s/app-service.yaml
+
+Step 4: Verify Deployment
+kubectl get pods
+kubectl get svc
+
+Step 5: Access Application
+Docker Desktop Kubernetes
